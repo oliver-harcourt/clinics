@@ -29,6 +29,15 @@ namespace ClinicsApi.Services.Appointments
             };
         }
 
+        public GetAppointmentResponse Get(GetAppointmentRequest request)
+        {
+            var appointment = this.appointmentsApplication.Get(Request.ToCaller(), request.Id);
+            return new GetAppointmentResponse
+            {
+                Appointment = appointment
+            };
+        }
+
         public EndAppointmentResponse Patch(EndAppointmentRequest request)
         {
             var appointment =

@@ -9,5 +9,7 @@ namespace AppointmentsApplication
         Appointment Create(ICurrentCaller caller, in DateTime startUtc, in DateTime endUtc, string doctorId);
 
         Appointment End(ICurrentCaller caller, string id);
+
+        Appointment Get(ICurrentCaller caller, string id);
     }
 }

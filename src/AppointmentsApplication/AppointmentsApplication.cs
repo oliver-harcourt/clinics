@@ -69,6 +69,11 @@ namespace AppointmentsApplication
 
             return appointment.ToAppointment();
         }
+
+        public Appointment Get(ICurrentCaller caller, string id)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public static class AppointmentConversionExtensions
